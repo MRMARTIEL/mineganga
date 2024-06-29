@@ -1,0 +1,293 @@
+/* Definições de variáveis de cores */
+:root {
+
+    /* Tema  */
+    --bg-color: #1e0a0a;
+    /* Vermelho muito escuro e suave */
+    --text-color: #ffffff;
+    /* Branco */
+    --primary-color: #3a0d0d;
+    /* Vermelho escuro suave */
+    --accent-color: #a83232;
+    /* Vermelho acentuado suave */
+
+}
+
+/* Definição da fonte */
+@font-face {
+    font-family: 'Minecraftia';
+    src: url('../Fonts/Minecraftia-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Estilos globais */
+body {
+    margin: 0;
+    font-family: 'Minecraftia', Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Tema escuro com base na preferência do usuário */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--bg-color);
+        /* Fundo para modo escuro */
+        color: var(--text-color);
+        /* Texto para modo escuro */
+    }
+
+    .container {
+        background-color: var(--primary-color);
+        /* Fundo do contêiner no modo escuro */
+    }
+
+    h1,
+    h2,
+    h3 {
+        color: var(--accent-color);
+        /* Cabeçalhos no modo escuro */
+    }
+
+    table {
+        background-color: var(--primary-color);
+        /* Fundo da tabela no modo escuro */
+    }
+
+    th {
+        background-color: var(--accent-color);
+        /* Cabeçalho da tabela no modo escuro */
+        color: var(--bg-color);
+        /* Texto do cabeçalho da tabela no modo escuro */
+    }
+
+    footer {
+        background-color: var(--accent-color);
+        /* Fundo do rodapé no modo escuro */
+        color: var(--bg-color);
+        /* Texto do rodapé no modo escuro */
+    }
+
+    #toggle-theme {
+        background-color: var(--accent-color);
+        /* Fundo do botão no modo escuro */
+        color: var(--bg-color);
+        /* Texto do botão no modo escuro */
+    }
+
+    #toggle-theme:hover {
+        background-color: var(--primary-color);
+        /* Fundo do botão no modo escuro ao passar o mouse */
+    }
+
+    .Logo {
+        padding-top: 0px;
+        padding-right: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+        border-radius: 0px;
+    }
+
+    .dddd {
+        text-align: justify;
+    }
+
+
+}
+
+/* Container principal */
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: var(--text-color);
+}
+
+/* Cabeçalhos */
+h1,
+h2,
+h3 {
+    color: var(--accent-color);
+}
+
+/* Listas */
+.role ul {
+    list-style-type: square;
+    padding-left: 20px;
+    text-align: left;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+table,
+th,
+td {
+    border: 1px solid var(--text-color);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Alternar Tema */
+.theme-toggle {
+    text-align: right;
+    padding: 10px;
+}
+
+#toggle-theme {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 10px 20px;
+    color: var(--bg-color);
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#toggle-theme:hover {
+    background-color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width : 1077px) {
+    .container {
+        padding: 10px;
+        position: absolute;
+        right: 0cm;
+    }
+
+    h1,
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1,
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    ul {
+        padding-left: 10px;
+    }
+
+    th,
+    td {
+        padding: 5px;
+    }
+}
+
+.filho {
+    text-align: center;
+}
+
+.Logo {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    margin-top: -89px;
+    margin-right: -89px;
+    margin-bottom: -89px;
+    margin-left: -89px;
+
+}
+
+.PARAGRAFOS {
+    text-align: justify;
+}
+
+
+
+.gray_box {
+    background: #28B031;
+    box-shadow: rgba(0, 0, 0, 0.05) 7px -7px inset, #36CA42 -7px 7px 0px inset;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font: 700 16px / 1.6em "Minecraftia", Arial, sans-serif;
+    padding: 20px;
+    position: relative;
+    transition: background-color 0.2s ease 0s, box-shadow 0.2s ease 0s;
+    user-select: none;
+    display: inline-block;
+    text-decoration: none;
+    /* Remove underline */
+    text-align: center;
+    /* Center the text */
+}
+
+.gray_box span {
+    color: rgb(83, 83, 83);
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.gray_box:hover {
+    box-shadow: rgba(0, 0, 0, 0.05) 7px -7px inset, rgb(229, 229, 229) -7px 7px 0px inset, rgba(255, 255, 255, 0.2) 0px 0px 100px inset;
+}
+
+.gray_box:active {
+    box-shadow: rgba(0, 0, 0, 0.05) 7px 7px inset, rgb(210, 210, 210) -7px -7px inset;
+}
+
+a.gray_box:hover,
+input[type="radio"]:checked+.gray_box {
+    background: #B00E9D;
+    box-shadow: rgba(0, 0, 0, 0.05) 7px -7px inset, #CA19B2 -7px 7px inset;
+    color: rgb(255, 255, 255);
+    text-align: left;
+}
+
+a.gray_box:hover .version,
+input[type="radio"]:checked+.gray_box .version {
+    color: rgb(186, 255, 197);
+}
